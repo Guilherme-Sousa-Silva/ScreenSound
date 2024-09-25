@@ -2,9 +2,21 @@
 
 public class Musica
 {
+    public Musica()
+    {
+        
+    }
     public Musica(string nome, int? anoLancamento, int? artistaId)
     {
         Nome = nome;
+        AnoLancamento = anoLancamento;
+        ArtistaId = artistaId;
+    }
+
+    public Musica(string nome, int id, int? anoLancamento, int? artistaId)
+    {
+        Nome = nome;
+        Id = id;
         AnoLancamento = anoLancamento;
         ArtistaId = artistaId;
     }
