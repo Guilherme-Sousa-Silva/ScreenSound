@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using ScreenSound.Modelos;
+﻿using ScreenSound.Modelos;
 
 namespace ScreenSound.Banco.DAL
 {
