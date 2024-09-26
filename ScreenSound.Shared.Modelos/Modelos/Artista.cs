@@ -15,6 +15,13 @@ public class Artista
         FotoPerfil = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
     }
 
+    public Artista(string nome, string bio, string fotoPerfil)
+    {
+        Nome = nome;
+        Bio = bio;
+        FotoPerfil = fotoPerfil;
+    }
+
     public Artista(string nome, string fotoPerfil, string bio, int id)
     {
         Nome = nome;
