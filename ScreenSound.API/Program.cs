@@ -3,6 +3,7 @@ using ScreenSound.API.Endpoints;
 using ScreenSound.Banco;
 using ScreenSound.Banco.DAL;
 using ScreenSound.Modelos;
+using ScreenSound.Shared.Modelos.Modelos;
 using System.Data.SqlTypes;
 using System.Text.Json.Serialization;
 
@@ -11,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ScreenSoundContext>();
 builder.Services.AddTransient<Dal<Artista>>();
 builder.Services.AddTransient<Dal<Musica>>();
+builder.Services.AddTransient<Dal<Genero>>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -22,6 +24,7 @@ var app = builder.Build();
 
 app.AddEndpointsArtistas();
 app.AddEndpointsMusicas();
+app.AddEdnpointsGenero();
 
 app.UseSwagger();
 app.UseSwaggerUI();
